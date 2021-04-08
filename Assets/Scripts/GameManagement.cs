@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
@@ -30,11 +31,19 @@ public class GameManagement : MonoBehaviour
         if (ball.transform.position.x <= leftWall.position.x)
         {
             scoreTwo++;
+            if (scoreTwo == 5)
+            {
+                SceneManager.LoadScene("WinTwoScene");
+            }
             ball.transform.position = startPosition;
         }
         if (ball.transform.position.x >= rightWall.position.x)
         {
             scoreOne++;
+            if (scoreOne == 5)
+            {
+                SceneManager.LoadScene("WinOneScene");
+            }
             ball.transform.position = startPosition;
         }
     }

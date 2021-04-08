@@ -11,6 +11,12 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene("InstructionsScene");
     }
 
+    public void GoToMainMenu()
+    {
+        Debug.Log("OPEN MAIN MENU");
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
     public void StartGame()
     {
         Debug.Log("START GAME");
